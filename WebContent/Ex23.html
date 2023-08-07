@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+	<script>
+// 		function func(){
+// 			let num = Number(document.getElementById("cnt").value);
+// 			num = num + 1;
+// 			document.getElementById("cnt").value = num;
+// 		}
+		
+		$(function(){
+			$("#btn1").click(function(){
+				$("#cnt").val( Number($("#cnt").val())+1);
+				// input 태그로부터 값 얻기 : $("#cnt").val()
+				// input 태그에 값 설정 : $ ("#cnt").val(새로운 값)
+			});
+		});
+	</script>
+</head>
+<body>
+	Count : <input type="text" id="cnt" value="0"/> <br/>
+	<button id="btn1">btn!</button>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>계산기</title>
+	<script>
+		function multiply(){
+			let num1 = Number(document.getElementById("n1").value);
+			let num2 = Number(document.getElementById("n2").value);
+			let mul = num1 * num2;
+			document.getElementById("result").value = mul;
+		}
+		function sum(){
+			let num1 = Number(document.getElementById("n1").value);
+			let num2 = Number(document.getElementById("n2").value);
+			let result = num1 + num2;
+			document.getElementById("result").value = result;
+		}
+		
+	</script>
+	
+</head>
+<body>
+	num1 : <input type="text" id="n1"/> <br/>
+	num2 : <input type="text" id="n2"/> <br/>
+	<button onclick="multiply()">곱하기</button> 
+	<button onclick="sum()">더하기</button> <br/>
+	result: <input type="text" id="result"/>
+	
+</body>
+</html>

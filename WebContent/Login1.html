@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		.fl { float: left; }
+		.fr { float: right; }
+		.main {
+			border: 1px solid black;
+			width: 770px;
+			margin: auto;
+			padding: 10px;
+			text-align: center;
+		}
+		.main h2 {
+			font-size: 21px;
+			padding-bottom: 8px;
+		}
+		#top input {
+			width: 100%;
+			height: 38px;
+			margin-bottom: 31px;
+		}
+		.middle input {
+			height: 38px;
+			margin-bottom: 20px;
+		}
+		.phone {
+			display: inline;
+			margin-left: 53px;
+			margin-right: 52px;
+		}
+		.num {
+			display: inline;
+		}
+		.numbt {
+			height: 30px;
+			width: 518px;
+			margin-bottom: 20px;
+			margin-left: 170px;
+		}
+		.numbt2 {
+			height: 30px;
+			width: 518px;
+			margin-bottom: 20px;
+			margin-left: 185px;
+		}
+		.gender {
+		    margin-right: 650px;
+		    margin-bottom: 35px;
+		    margin-top: 35px;
+		}
+		.addres {
+			width: 100%;
+			height: 40px;
+		}
+		.join {
+			width: 100%;
+			height: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<h2>회원가입</h2>
+		<div id="top">
+			<input type="text" placeholder="이메일을 입력해주세요.">
+			<input type="text" placeholder="이름을 입력해주세요.">
+			<input type="password" placeholder="비밀번호를 입력해주세요.">
+			<input type="password" placeholder="비밀번호를  다시 입력해주세요.">
+		</div>
+		<div style="clear:both;"></div>
+		<div class="middle">
+			<input class="fl" type="text" maxlength="3">
+			<div class="phone">-</div>
+			<input type="text" maxlength="4">
+			<div class="phone">-</div>
+			<input class="fr" type="text" maxlength="4">
+		</div>
+		<div class="num">000000</div>
+		<button class="numbt">인증번호 전송</button>
+		<div class="num">03:00</div>
+		<button class="numbt2">인증확인</button>
+		<select class="addres">
+			<option>지역을 선택해주세요.</option>
+			<option>서울</option>
+			<option>경기</option>
+			<option>인천</option>
+		</select>
+		<div class="gender">
+			<input type="radio" name="gender">남성
+			<input type="radio" name="gender">여성
+		</div>
+		<hr style="margin-bottom: 10px;"></hr>
+		<button class="join">가입하기</button>
+	</div>
+</body>
+</html>

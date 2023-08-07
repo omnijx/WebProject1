@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>var 2</title>
+</head>
+<body>
+	<script>
+		function run(){
+			for(var i=1; i<=3; i++){}		//for문 안에서 선언된 i 가 for문 밖에서도 살아있음
+			alert("i : " + i);
+		}
+		run();
+	</script>
+</body>
+</html>

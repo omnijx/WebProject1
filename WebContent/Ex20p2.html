@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script>
+		function getParamMap(queryString) {
+			let splited = queryString.replace("?", "").split(/[=?&]/);
+			let param = {};
+			for(let i = 0; i < splited.length; i++) {
+				param[splited[i]] = splited[++i];
+			}
+			return param;
+		}
+		let queryString = location.search;
+		const paramObj = getParamMap(queryString);
+// 		alert("ID : " + paramObj.id+" PW : " + paramObj.pw);
+		let id = paramObj.id;
+		let pw = paramObj.pw;
+		if(id == "JH" && pw == "1234") {
+			alert(id + "님 안녕하세요! 로그인되었습니다.")
+		} else {
+			alert("로그인 정보가 잘못 되었습니다. 다시 로그인하세요.");
+			location.href = "Ex20.html"
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ex22 : 유효성 체크 (Validation)</title>
+	<script>
+		function is_alpha(c){
+			// c가 영문자이면 true를 리턴하고, 아니면 false를 리턴.
+			if((c>='a' && c<='z') || (c>='A' && c<='Z')){
+				return true;
+			}
+			else {
+				return false;
+				}
+		}
+	
+		function check() {
+			let id = frm.id.value;
+			let pw = frm.pw.value;
+// 			alert(id + "/" + pw);
+			// 1) 아이디는 8글자 이상일 것.
+			if(id.length<8) {
+				alert("아디디는 8글자 이상 입력해주세요.");
+				return false;
+			}
+			// 2) 패스워드는 영문자로 시작할것.
+			let ch = pw.charAt(0);
+			if(!is_alpha(ch)){
+				alert("비밀번호는 영문자로 시작해주세요.");
+				return false;
+			}
+			return true;
+		}
+	</script>
+</head>
+<body>
+	<form name="frm" action="Ex22p2.html">
+		ID : <input type="text" name="id"/> <br/>
+		PW : <input type="password" name="pw"/> <br/>
+		<input type="submit" value="로그인" onclick="return check();"/>
+	</form>
+</body>
+</html>

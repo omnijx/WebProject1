@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script src="js/jquery-3.7.0.min.js"></script>
+	<script>
+// 		function calc_price() {
+// 			let u = Number($(".unit_price").text().replace("원",""));
+// 			let q = Number($(".qty").val());
+// 			let price = q * u;
+// 			$(".price").html("<b>" + price + "원</b>");
+// 		}
+		function calc_price(){
+			let num = 0;
+			let sum = 0;
+			$(".unit_price").each(function(index, item){
+				let u = Number($(item).text().replace("원",""));
+				let q = Number($(this).parent().find(".qty").val());
+				$(item).parent().find(".price").html("<b>" + (q * u) + "원</b>");
+				num += q;
+				sum += q*u;
+			});
+				$(".all").text(num+"개"); 
+				$(".total").text(sum+"원"); 
+		}
+		$(function() {
+			$(".btn_plus").click(function() {
+				let q = $(this).parent().find(".qty").val();
+				$(this).parent().find(".qty").val(Number(q)+1);
+				calc_price();
+			});
+			$(".btn_minus").click(function() {
+				let q = $(this).parent().find(".qty").val();
+				if(Number(q) > 0){
+				$(this).parent().find(".qty").val(Number(q)-1);
+				calc_price();
+				}
+			});
+			calc_price();
+		});
+	</script>
+	<style>
+		table { border-collapse: collapse; }
+		th, td { border: 1px solid grey; padding: 8px; }
+		td > img { width: 150px; }
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>품목</th>
+			<th>단가</th>
+			<th>수량</th>
+			<th>가격</th>
+		</tr>
+		<tr>
+			<td><img src="img/컵라면700.png"/></td>
+			<td class="unit_price">700원</td>
+			<td>
+				<button class="btn_plus">+</button>
+				<input type="text" class="qty" value="0"/>
+				<button class="btn_minus">-</button>
+			</td>
+			<td class="price"></td>
+		</tr>
+		<tr>
+			<td><img src="img/햇반500.png"/></td>
+			<td class="unit_price">500원</td>
+			<td>
+				<button class="btn_plus">+</button>
+				<input type="text" class="qty" value="0"/>
+				<button class="btn_minus">-</button>
+			</td>
+			<td class="price"></td>
+		</tr>
+		<tr>
+			<td><img src="img/초코송이2000.png"/></td>
+			<td class="unit_price">2000원</td>
+			<td>
+				<button class="btn_plus">+</button>
+				<input type="text" class="qty" value="0"/>
+				<button class="btn_minus">-</button>
+			</td>
+			<td class="price"></td>
+		</tr>
+		<tr>
+			<th colspan="2">총 개수</th>
+			<th colspan="2">총 금액</th>
+		</tr>
+		<tr>
+			<td colspan="2" class="all"></td>
+			<td colspan="2" class="total"></td>
+		</tr>
+	</table>	
+</body>
+</html>
+
+
+
+
+
+
+
+

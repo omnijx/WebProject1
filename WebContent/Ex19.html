@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		function getParamMap(queryString) {
+			let splited = queryString.replace("?", "").split(/[=?&]/);
+			let param = {};
+			for(let i = 0; i < splited.length; i++) {
+				param[splited[i]] = splited[++i];
+			}
+			return param;
+		}
+		let queryString = location.search;
+// 		alert("queryString : " + queryString);
+		const paramObj = getParamMap(queryString);
+		alert(paramObj.num1+","+paramObj.num2);
+	</script>
+</body>
+</html>

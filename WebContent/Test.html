@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+    <style>
+  	 	 *{
+                list-style: none;
+        }
+        body{
+        	font: 16px/1.6 "Noto Sans KR";
+        }
+        #div1{
+                width : 1200px;
+                height : 263px;
+                background-image: url("Imeges/fc서울 미디어 배너.jpg");
+                width: 100%;
+                min-width :1200px;
+        }
+        #div2{
+                width: 100%;
+                height : 60px;
+                background: rgba(199, 1, 1, 0.9);
+        }
+        .media{
+                height: 263px;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 56px;
+            font-weight: 500;
+            padding-top : 30px;
+            padding-bottom : 20px;
+        }
+        @font-face{
+                font-family : "Exo-Bold";
+                src: url("font/Exo-Bold.otf");
+        }
+        h2{
+                font-family : "Exo-Bold";
+                font-size : 56px;
+        }
+        ul{
+            position: relative;
+                display: flex;
+                margin: 0 auto;
+        }
+        li{
+                background: rgba(199, 1, 1, 0.9);
+                width: 100%;
+                max-width: 240px;
+        }
+        .li_1{
+            min-width: 60px;
+            position: relative;
+            border: 1px solid #d43e3e;
+            border-style: none solid;
+                    background: url(Imeges/home.png) no-repeat center center;
+            text-indent: -9999px;
+            width: 60px;
+            height: 60px;
+        }
+        p{
+            color: #fff;
+        }
+        .li_2{
+            min-width: 240px;
+            height: 60px;
+            padding: 0 20px;
+            font-size: 18px;
+            font-weight: 300;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-pack: start;
+            justify-content: flex-start;
+            border: 1px solid #d43e3e;
+            text-transform: uppercase;
+            background: rgba(199, 1, 1, 0.9);
+        }
+        li button::after {
+                content: '';
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+            margin-left: auto;
+            background: url(Imeges/ico_dropDown.png) no-repeat center center;
+        }
+        button{
+            border: none;
+            background: none;
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+        }
+    	body img{
+    		vertical-align: middle;	
+    	}
+    	.subtop{
+    		display: flex;
+		    -webkit-box-align: center;
+		    align-items: center;
+		    -webkit-box-pack: center;
+		    justify-content: center;
+		    height: 137px;
+		    border-bottom: 1px solid #d2d2d2;
+		    position: relative;
+		    margin-bottom: 50px;
+    	}
+    	.left{
+    		left: 0;
+    		position: absolute;
+    		top: 50%;
+    		transform: translateY(-50%);
+    	}
+    	.right{
+    		right: 0; 
+    		position: absolute;
+    		top: 50%;
+    		transform: translateY(-50%);
+    	}
+    	.right button {
+    		font-size: 14px;
+		    font-weight: 300;
+		    color: #666;
+		    border: 1px solid #666;
+		    padding: 5px 10px;
+    	}
+    	.left span{
+    		font-size: 16px;
+		    font-weight: 300;
+		    color: #666;
+    	}
+    	.left span img {
+		    margin-left: 10px;
+		}
+		.left a {
+			margin-left: 15px;
+			display: inline-block;
+		    text-decoration: none;
+		    color: #222;
+		}
+		.h3 {
+			font-family: 'Noto Sans KR';
+		    font-size: 38px;
+		    font-weight: 700;
+		    color: #222;
+		    padding: 30px 0;
+		}
+    	.box{
+    		margin: 50px 0 20px;
+    		border: 1px solid #d2d2d2;
+    		background: #fcfcfc;
+    		padding: 30px;
+    		display: flex;
+    		-webkit-box-align: center;
+		    align-items: center;
+		    -webkit-box-pack: center;	
+		    justify-content: center;
+    	}
+		.searchtype{
+			font-size: 15px;
+			min-width: 120px;
+   			height: 40px;
+		    padding: 0 10px;
+		    border: 1px solid #b2b2b2;
+		    font-family: inherit;
+		    background: url(https://www.fcseoul.com/resources/front/images/sub/common/ico_select.png) no-repeat 95% 50%;
+		    border-radius: 0px;
+		    appearance: none;
+		    min-width: 120px;
+		    font-weight: 400;
+		    width:120px; 
+		    height:40px;
+		}
+		input[type="text"]{
+			font-size: 15px;
+			width: 300px;
+		    background: none;
+		    margin: 0 2px;
+		    min-width: 120px;
+		    height: 40px;
+		    padding: 0 10px;
+		    border: 1px solid #b2b2b2;
+		    font-family: inherit;
+		    font-weight: 500;
+		    margin-left: 5px;
+		}
+		input[type="submit"]{
+			width: 120px; 
+			border-color: #222;
+		    background: #222;
+		    color: #fff;
+		    font-weight: 300;
+		    height:40px;
+		    margin-left: 4px;
+		}
+		.tt{
+			background: #f7f7f7;
+		    border-top: 1px solid #0e0e0e;
+		    font-weight: 500;
+		    vertical-align: middle;
+		    text-align: center;
+		    font-size: 16px;
+            padding: 15px;
+		}
+		.tb{
+			 display: flex;
+		    -webkit-box-orient: vertical;
+		    -webkit-box-direction: normal;
+		        flex-direction: column;
+		        vertical-align: baseline;
+		}
+     
+    </style>
+</head>
+<body>
+ 		<div id = "div1">
+             <div class = "media">
+                        <h2>
+                        MEDIA
+                        </h2>
+                </div>
+        </div>
+        <div id = "div2">
+                <ul >
+                        <li class = "li_1"></li>
+                        <li>
+                                <button type = "button" class = "li_2">
+                                        <p>MEDIA</p>
+                                </button>
+                        </li>
+                        <li>
+                                <button type = "button" class = "li_2">
+                                        <p>NEWS</p>
+                                </button>
+                        </li>
+                </ul>
+        </div>
+	<section class="subtop">
+	    <div class="left">
+	    	<span>share
+	    		<img src="https://www.fcseoul.com/resources/front/images/sub/common/ico_gt.png"/>
+	    	</span>
+	    	<a>
+	    		<img src="https://www.fcseoul.com/resources/front/images/sub/common/ico_sns1.png"/>
+	    	</a>
+	    </div>
+	    <h3 class="h3">NOTICE</h3>
+	    <div class="right">
+	    	<button type="button">URL 복사</button>
+	    </div>
+	</section>
+	<section>
+		<div class="box">
+			<select class="searchtype">
+				<option>전체</option>
+				<option>제목</option>
+				<option>내용</option>
+			</select>
+			<input type="text" name="searchValue" value placeholder="검색어를 입력해주세요."><input type="submit" value="검색">
+		</div>
+	</section>
+	<div class="tb">
+		<table>
+			<thead>
+				<tr>
+					<th class="tt">번호</th>
+					<th class="tt">제목</th>
+					<th class="tt">작성일</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+</body>
+</html>

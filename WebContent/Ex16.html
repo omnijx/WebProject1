@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>함수스코프(function scope) vs 블록스코프(block scope)</title>
+</head>
+<body>
+	<script>
+		function run(){
+			if(true){
+// 				var num = 55;
+				let num = 55;
+				alert(num);	// 55
+			}
+			alert(num);		// 55 -> ERR num is not defind
+		}
+		run();
+		alert(num);		// ERR num is not defind
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>innerHTML 예제</title>
+	<style>
+		table { border-collapse: collapse; }
+		table, td { border: 1px solid #afafaf; }
+		td { text-align: center; padding: 8px; }
+		#div1 { margin-top: 10px; }
+	</style>
+	<script>
+		function f1() {
+			document.getElementById("div1").innerHTML = "<table><tr><td>"+document.getElementById("a").value+"</td><td>"+document.getElementById("b").value+"</td></tr><tr><td>"+document.getElementById("c").value+"</td><td>"+document.getElementById("d").value+"</td></tr></table>";
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="a"/>
+	<input type="text" id="b"/><br/>
+	<input type="text" id="c"/>
+	<input type="text" id="d"/><br/>
+	<div id="div1">
+		<button onclick="f1()">입력완료</button>
+		<table>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+		</table>
+	
+	
+<!-- 		<button onclick="" value="입력완료"/> -->
+<!-- 		<button onclick="">입력완료</button> -->
+<!-- 		<input type="button" value="입력완료"/> -->
+		
+	</div>
+	
+</body>
+</html>

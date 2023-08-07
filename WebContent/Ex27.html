@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery 연습</title>
+	<script src="js/jquery-3.7.0.min.js"></script>
+	<script>
+		$(function() {
+			$("body > img").click(function() {
+				//$(this).css('display','none');
+				//$(this).remove();
+				let img_src = $(this).attr("src");
+				let price = $(this).attr("price");
+				let str1 = '<div class="basket_item">'
+					+ ' <img src="' + img_src + '"/>'
+					+ ' <span>' + price + '원</span>'
+					+ ' <span><button class="btn_x">X</button></span>'
+					+ '</div>';
+				$("#div_basket").append(str1);
+			});
+// 			$(".btn_x").click(function() {
+// 				$(this).parent().parent().remove();
+// 			});
+			$(document).on("click", ".btn_x", function(){
+				$(this).parent().parent().remove();
+			});
+		});
+	</script>
+	<style>
+		body > img { width: 200px; border:1px solid black; border-radius:5px; }
+		.basket_item { border: 1px solid grey; width: 200px; margin: 0 auto; }
+		.basket_item > img { width: 100px; }
+		.btn_x { color: red; font-weight: 900; }
+	</style>
+</head>
+<body>
+	<img pcode="11001" price="700" src="img/컵라면700.png"/>
+	<img pcode="11002" price="500" src="img/햇반500.png"/>
+	<img pcode="11003" price="2000" src="img/초코송이2000.png"/>
+	<br/>
+	<div id="div_basket">
+		<div class="basket_item">
+			<img src="img/컵라면700.png"/>
+			<span>700원</span>
+			<span><button class="btn_x">X</button></span>
+		</div>
+		<div class="basket_item">
+			<img src="img/컵라면700.png"/>
+			<span>700원</span>
+			<span><button class="btn_x">X</button></span>
+		</div>
+		<div class="basket_item">
+			<img src="img/컵라면700.png"/>
+			<span>700원</span>
+			<span><button class="btn_x">X</button></span>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
